@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+bin/setup_symlinks
+bin/setup_homebrew

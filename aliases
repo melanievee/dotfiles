@@ -1,0 +1,23 @@
+# Unix
+alias tlf="tail -f"
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+alias -g G='| grep'
+alias -g M='| less'
+alias -g L='| wc -l'
+alias -g ONE="| awk '{ print \$1}'"
+alias vim="$EDITOR"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# git
+alias g='git'
+alias grh='g f && g r --hard HEAD@{u}'
+alias gup='g f && g r'
+
+# General
+alias k=clear
