@@ -71,7 +71,8 @@ source ~/.nvm/nvm.sh
 source ~/.aliases
 
 # load env variables with direnv
-eval "$(direnv hook $0)"
+# eval "$(direnv hook $0)"
+eval "$(direnv hook zsh)"
 
 # Prompt
 GIT_THEME_PROMPT_DIRTY=" ${red}✗"
