@@ -65,7 +65,7 @@ export PATH="$HOME/.rvm/bin:/usr/local/sbin:$PATH:$HOME/.bin:$GOPATH/bin"
 export PATH="$PATH:/usr/local/heroku/bin"
 source ~/.nvm/nvm.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # aliases
 source ~/.aliases
