@@ -17,6 +17,7 @@ colors
 
 # enable colored output from ls, etc
 export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # history settings
 setopt histignoredups
