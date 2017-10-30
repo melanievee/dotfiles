@@ -18,6 +18,7 @@ alias v="$VISUAL"
 alias g='git'
 alias grh='g f && g r --hard HEAD@{u}'
 alias gup='g f && g r'
+alias behind='git rev-list --left-right --count origin/master...HEAD'
 
 # General
 alias k=clear

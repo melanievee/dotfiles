@@ -23,3 +23,5 @@
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative
   stat = log --graph --pretty=format:'%Cred%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative --stat
 
+[pull]
+	rebase = true
