@@ -156,3 +156,13 @@ setopt PROMPT_SUBST
 # prompt
 export PS1='$(rvm_ruby_version) [%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info)'$'\n''%{$fg[green]%}→%{$reset_color%} '
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# VS Code setup to use "code" in command line
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+
+# Add RVM to PATH for scripting. Make sure this is th elast PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
