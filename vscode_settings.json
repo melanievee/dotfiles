@@ -1,0 +1,23 @@
+{
+  "window.zoomLevel": 0,
+  "editor.fontSize": 14,
+  "workbench.colorTheme": "Base16 Dark Chalk",
+  "extensions.ignoreRecommendations": false,
+  "tslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "editor.rulers": [80],
+  "explorer.confirmDragAndDrop": false,
+  "editor.tabSize": 2,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "never"
+}
