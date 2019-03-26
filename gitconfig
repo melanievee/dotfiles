@@ -1,7 +1,7 @@
 [commit]
   template = ~/.gitmessage
 [user]
-  email = melanie@substantial.com
+  email = melanie@ganaz.com
   name = Melanie VanderLugt
 [push]
 	default = matching
@@ -25,3 +25,8 @@
 
 [pull]
 	rebase = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

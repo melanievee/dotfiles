@@ -68,6 +68,9 @@ source ~/.nvm/nvm.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+[[ -s /Users/melanie/.autojump/etc/profile.d/autojump.sh ]] && source /Users/melanie/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+
 # Android React Native setup
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -164,5 +167,4 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Add RVM to PATH for scripting. Make sure this is th elast PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
-echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
+export PATH="$PATH:$HOME/bin"
