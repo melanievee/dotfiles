@@ -70,6 +70,7 @@ source ~/.nvm/nvm.sh
 
 [[ -s /Users/melanie/.autojump/etc/profile.d/autojump.sh ]] && source /Users/melanie/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Android React Native setup
 export ANDROID_HOME=$HOME/Library/Android/sdk

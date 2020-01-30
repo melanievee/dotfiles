@@ -1,7 +1,7 @@
 [commit]
   template = ~/.gitmessage
 [user]
-  email = melanie@ganaz.com
+  email = melanie@substantial.com
   name = Melanie VanderLugt
 [push]
 	default = matching
