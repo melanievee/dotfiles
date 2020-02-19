@@ -60,12 +60,9 @@ export PATH="$HOME/.bin:$PATH"
 
 # mkdir .git/safe in the root of repositories you trust
 export GOPATH=$HOME/src/go
-export PATH="$HOME/.rvm/bin:/usr/local/sbin:$PATH:$HOME/.bin:$GOPATH/bin"
 
 # add heroku cli
 export PATH="$PATH:/usr/local/heroku/bin"
-source ~/.nvm/nvm.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 [[ -s /Users/melanie/.autojump/etc/profile.d/autojump.sh ]] && source /Users/melanie/.autojump/etc/profile.d/autojump.sh
@@ -110,13 +107,6 @@ parse_git_dirty() {
   fi
 }
 
-# show current rbenv version if different from rbenv global
-rvm_ruby_version() {
-  if [[ -f ".ruby-version" ]]; then
-    echo "[%{$fg_bold[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}]"
-  fi
-}
-
 show_upstream() {
   upstream_state=''
   current=true
@@ -158,14 +148,18 @@ export CLICOLOR=1
 setopt PROMPT_SUBST
 
 # prompt
-export PS1='$(rvm_ruby_version) [%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info)'$'\n''%{$fg[green]%}→%{$reset_color%} '
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PS1='[%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info)'$'\n''%{$fg[green]%}→%{$reset_color%} '
 
 # VS Code setup to use "code" in command line
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 
-# Add RVM to PATH for scripting. Make sure this is th elast PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 export PATH="$PATH:$HOME/bin"
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+echo -e '
+. /Users/melanievanderlugt/.asdf/asdf.sh' >> ~/.bash_profile
+echo -e '
+. /Users/melanievanderlugt/.asdf/completions/asdf.bash' >> ~/.bash_profile
