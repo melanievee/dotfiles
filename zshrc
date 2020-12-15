@@ -95,10 +95,6 @@ ZSH_THEME_GIT_PROMPT_AHEAD="𐌣"
 ZSH_THEME_GIT_PROMPT_BEHIND="ↆ"
 ZSH_THEME_GIT_PROMPT_CURRENT="="
 
-parse_git_branch() {
-  (command git symbolic-ref -q HEAD || command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
-}
-
 parse_git_dirty() {
   if command git diff-index --quiet HEAD 2> /dev/null; then
     echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
@@ -137,6 +133,12 @@ git_prompt_info() {
   fi
 }
 
+aws_vault_info() {
+  if [ $AWS_VAULT ]; then
+    echo "[$AWS_VAULT] "
+  fi
+}
+
 # makes color constants available
 autoload -U colors
 colors
@@ -148,7 +150,7 @@ export CLICOLOR=1
 setopt PROMPT_SUBST
 
 # prompt
-export PS1='[%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info)'$'\n''%{$fg[green]%}→%{$reset_color%} '
+export PS1='$(aws_vault_info)[%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info)'$'\n''%{$fg[green]%}→%{$reset_color%} '
 
 # VS Code setup to use "code" in command line
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -163,3 +165,18 @@ echo -e '
 . /Users/melanievanderlugt/.asdf/asdf.sh' >> ~/.bash_profile
 echo -e '
 . /Users/melanievanderlugt/.asdf/completions/asdf.bash' >> ~/.bash_profile
+
+# WSGR
+function t() {
+    if [ -n "$TEST_COMMAND" ]
+    then
+        eval $TEST_COMMAND
+    elif [ -f test.sh ]
+    then
+        ./test.sh
+    else
+        bundle exec bench
+    fi
+}
+
+PATH=$HOME/.subscript/bin:$PATH

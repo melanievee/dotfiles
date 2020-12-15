@@ -18,12 +18,7 @@ alias v="$VISUAL"
 alias g='git'
 alias grh='g f && g r --hard HEAD@{u}'
 alias gup='g f && g r'
-alias behind='git rev-list --left-right --count origin/master...HEAD'
+alias behind='git rev-list --left-right --count origin/main...HEAD'
 
 # General
 alias k=clear
-
-# Huemato
-alias h_status='HUEMATO_SERVER=10.10.0.222 ./huemato_client.rb status'
-alias h_start='HUEMATO_SERVER=10.10.0.222 ./huemato_client.rb start'
-alias h_stop='HUEMATO_SERVER=10.10.0.222 ./huemato_client.rb stop'
