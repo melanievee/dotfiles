@@ -159,8 +159,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export PATH="$PATH:$HOME/bin"
 . $HOME/.asdf/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
-
 echo -e '
 . /Users/melanievanderlugt/.asdf/asdf.sh' >> ~/.bash_profile
 echo -e '
@@ -180,3 +178,20 @@ function t() {
 }
 
 PATH=$HOME/.subscript/bin:$PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Vroom support 5/6/22
+export PATH=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin:$PATH
+
+PATH=$PATH:$HOME/Library/Android/Sdk/emulator
+PATH=$PATH:$HOME/Library/Android/Sdk/tools
+PATH=$PATH:$HOME/Library/Android/Sdk/tools/bin
+PATH=$PATH:$HOME/Library/Android/Sdk/platform-tools
+export ANDROID_HOME=$HOME/Library/Android/
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
+
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
