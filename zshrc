@@ -195,3 +195,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+
+export COMPOSER_ALLOW_SUPERUSER=1; composer show;
+export PATH="${HOME}/.pyenv/shims:${PATH}"
